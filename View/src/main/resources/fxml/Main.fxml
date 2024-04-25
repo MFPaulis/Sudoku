@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.comp.view.MainController">
+   <children>
+      <Text layoutX="235.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SUDOKU">
+         <font>
+            <Font name="System Bold" size="33.0" />
+         </font>
+      </Text>
+      <Text fx:id="difficultyText" layoutX="203.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%wybierzPoziomTrudnosci" textAlignment="CENTER">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+      <ComboBox fx:id="comboBox" layoutX="225.0" layoutY="175.0" onAction="#comboBoxUpdated" prefWidth="150.0" />
+      <Button fx:id="button" layoutX="264.0" layoutY="220.0" mnemonicParsing="false" onAction="#buttonClicked" text="Start">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Button>
+      <Text fx:id="authors" layoutX="14.0" layoutY="370.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="253.33670043945312" />
+      <RadioButton fx:id="rbutton1" layoutX="31.0" layoutY="25.0" mnemonicParsing="false" onAction="#radioSelect" selected="true" text="%jezykPolski">
+         <toggleGroup>
+            <ToggleGroup fx:id="jezyki" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="rbutton2" layoutX="31.0" layoutY="48.0" mnemonicParsing="false" onAction="#radioSelect" text="%jezykAngielski" toggleGroup="$jezyki" />
+   </children>
+</AnchorPane>
